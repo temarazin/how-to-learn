@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6, p {
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 
@@ -145,15 +145,80 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: bold;
 }
 
-/* Вроде не нарушает БЭМ, да и красивый способ задать отступ без :first-child / :last-of-type */
+/* Вроде не нарушает БЭМ, да и красивый способ задать отступы без :first-child / :last-of-type */
 .two-columns__paragraph ~ .two-columns__paragraph {
   margin-top: 30px;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+
+/* Digits */
+
+.digits {
+  padding: 100px 0;
+}
+
+/* Section title */
+
+.section-title {
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Section subtitle */
+
+.section-subtitle {
+  width: 60%;
+  margin: 20px auto 0;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* Table */
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.digits__table {
+  padding-top: 60px;;
+}
+
+.table__cell {
+  flex: 0 0 250px;
+}
+
+/* todo найти способ получше */
+.table__cell:nth-child(n+5) {
+  margin-top: 60px;
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
 }
+
+.table__heading {
+  margin-bottom: 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
