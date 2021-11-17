@@ -238,10 +238,18 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: bold;
 }
 
+.table__heading_theme_dark {
+  color: #fff;
+}
+
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+}
+
+.table__text_theme_dark {
+  color: #fff;
 }
 
 /* Feynman */
