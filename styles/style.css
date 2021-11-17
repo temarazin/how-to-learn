@@ -164,6 +164,10 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 100px 0;
 }
 
+.digits__table {
+  padding-top: 60px;
+}
+
 
 /* Section title */
 
@@ -174,6 +178,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title_theme_dark {
+  color: #fff;
 }
 
 
@@ -186,6 +196,12 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  position: relative;
+  z-index: 10;
+}
+
+.section-subtitle_theme_dark {
+  color: #fff;
 }
 
 
@@ -199,12 +215,12 @@ h1, h2, h3, h4, h5, h6, p {
   margin: -60px auto 0;
 }
 
-.digits__table {
-  padding-top: 60px;;
+.table_theme_dark {
+  margin-top: -80px;
 }
 
 .table__cell {
-  flex: 0 0 250px;
+  width: 250px;
   margin-top: 60px;
 }
 
@@ -252,7 +268,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .feynman__subtitle {
-  width: max-content;
+  width: max-content; /* в ie 11 не поддерживается, но вроде ничего запрещенного */
   margin: 70px auto 0;
   line-height: 51px;
   font-size: 36px;
@@ -267,4 +283,30 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+}
+
+/* Kaufman */
+
+.kaufman {
+  position: relative;
+  padding: 90px 0;
+  background-color: #1f1f1f;
+  overflow: hidden;
+}
+
+.kaufman__table {
+  padding-top: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.kaufman__trangle {
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  right: -210px;
+  top: 0;
+  background: url('../images/kaufman-triangle.svg') center no-repeat;
+  background-size: contain;
+  z-index: 0;
 }
