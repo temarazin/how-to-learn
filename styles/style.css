@@ -1,8 +1,12 @@
-/* -reset- */
+/*** -reset- ***/
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
+
+
+/*** -blocks- ***/
+
 
 /* Page */
 
@@ -83,10 +87,11 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   left: 64px;
   top: 30px;
+  background-image: url('../images/logo_place_header.svg');
 }
 
-.logo_image_black {
-  background-image: url(../images/logo_place_header.svg);
+.logo_place_footer {
+  background-image: url('../images/logo_place_footer.svg');
 }
 
 
@@ -164,10 +169,6 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 100px 0;
 }
 
-.digits__table {
-  padding-top: 60px;
-}
-
 
 /* Section title */
 
@@ -212,11 +213,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1100px;
-  margin: -60px auto 0;
-}
-
-.table_theme_dark {
-  margin-top: -80px;
+  margin: 0 auto;
 }
 
 .table__cell {
@@ -303,7 +300,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .kaufman__table {
-  padding-top: 80px;
   position: relative;
   z-index: 10;
 }
@@ -317,4 +313,75 @@ h1, h2, h3, h4, h5, h6, p {
   background: url('../images/kaufman-triangle.svg') center no-repeat;
   background-size: contain;
   z-index: 0;
+}
+
+/* Footer */
+
+.footer {
+  min-height: 350px;
+  box-sizing: border-box;
+  padding: 60px 0 40px;
+  background-color: #1f1f1f;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 250px;
+  margin: 0 auto;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer__column-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column-link:hover {
+  color: #ddd;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer__social-icon_icon_fb {
+  background-image: url('../images/facebook_color_white.svg');
+}
+
+.footer__social-icon_icon_vk {
+  background-image: url('../images/vk_color_white.svg');
+}
+
+.footer__social-icon_icon_instagram {
+  background-image: url('../images/instagram_color_white.svg');
 }
