@@ -1,13 +1,3 @@
-/*** -reset- ***/
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-}
-
-
-/*** -blocks- ***/
-
-
 /* Page */
 
 .page {
@@ -22,6 +12,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .header {
   display: flex;
+  align-items: center;
   position: relative;
   height: 100vh;
   min-height: 600px;
@@ -30,9 +21,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header__title {
-  position: relative;
-  margin: auto auto auto 64px;
-  width: 730px;
+  margin: 0 0 0 64px;
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
@@ -41,13 +31,27 @@ h1, h2, h3, h4, h5, h6, p {
 
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  margin: 0;
+  max-width: 388px;
   left: 64px;
   bottom: 30px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
   z-index: 20;
+}
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: #0f60cd;
+}
+
+.header__link::after {
+  content: ' →';
 }
 
 .header__main-illustration {
@@ -75,7 +79,6 @@ h1, h2, h3, h4, h5, h6, p {
 /* Logo */
 
 .logo {
-  display: block;
   width: 183px;
   height: 32px;
   background-repeat: no-repeat;
@@ -92,22 +95,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .logo_place_footer {
   background-image: url('../images/logo_place_footer.svg');
-}
-
-
-/* Link more */
-
-.linkmore {
-  color: #2f80ed;
-  text-decoration: none;
-}
-
-.linkmore:hover {
-  color: #0f60cd; /* так, для красоты */
-}
-
-.linkmore::after {
-  content: ' →';
 }
 
 
@@ -131,9 +118,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .two-columns__brief {
   flex-basis: 175px;
-}
-
-.two-columns__title {
+  margin: 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -157,9 +142,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: bold;
 }
 
-/* Вроде не нарушает БЭМ, да и красивый способ задать отступы без :first-child / :last-of-type */
-.two-columns__paragraph ~ .two-columns__paragraph {
-  margin-top: 30px;
+.two-columns__paragraph {
+  margin: 30px 0 0;
+}
+
+.two-columns__paragraph:first-child {
+  margin-top: 0;
 }
 
 
@@ -212,7 +200,9 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
   width: 1100px;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -224,12 +214,11 @@ h1, h2, h3, h4, h5, h6, p {
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
   margin-top: 80px;
 }
 
 .table__heading {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
@@ -243,6 +232,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  margin: 0;
 }
 
 .table__text_theme_dark {
@@ -264,7 +254,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .feynman__title {
-  width: 648px;
+  max-width: 648px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.15;
@@ -273,21 +263,30 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .feynman__subtitle {
-  width: max-content; /* в ie 11 не поддерживается, но вроде ничего запрещенного */
+  max-width: 500px; /* так как в брифе ширина не указана, я взял ширину, которая не дает залезать тексту на ссылку "Подробнее" */
   margin: 70px auto 0;
+  text-align: center;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
 }
 
 .feynman__link {
-  display: block;
   position: absolute;
   top: 50%;
   right: 40px;
   line-height: 51px;
   font-size: 36px;
-  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.feynman__link:hover {
+  color: #0f60cd; /* так, для красоты */
+}
+
+.feynman__link::after {
+  content: ' →';
 }
 
 /* Kaufman */
@@ -344,11 +343,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer__column-heading {
+  margin: 0 0 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 20px;
+}
+
+.footer__column-links {
+  padding: 0;
+  list-style: none;
 }
 
 .footer__column-link {
@@ -363,6 +367,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .footer__column-link:hover {
   color: #ddd;
+}
+
+.footer__author {
+  margin: 18px 0;
 }
 
 .footer__social-icon {
