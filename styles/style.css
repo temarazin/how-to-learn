@@ -78,7 +78,6 @@
 
 /* Logo */
 
-/* background-image задаётся в модификаторах. Я пока оставил как есть, жду ответа от наставника */
 .logo {
   width: 183px;
   height: 32px;
@@ -237,6 +236,7 @@
   color: #fff;
 }
 
+
 /* Feynman */
 
 .feynman {
@@ -287,6 +287,7 @@
   content: ' →';
 }
 
+
 /* Kaufman */
 
 .kaufman {
@@ -311,6 +312,7 @@
   background-size: contain;
   z-index: 0;
 }
+
 
 /* Footer */
 
