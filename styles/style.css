@@ -152,12 +152,12 @@
 
 .digits {
   padding: 100px 0;
-}
+} */
 
 
 /* Section title */
 
-.section-title {
+/* .section-title {
   width: 60%;
   margin: 0 auto;
   line-height: 1.15;
@@ -261,7 +261,7 @@
 }
 
 .feynman__subtitle {
-  max-width: 500px; /* так как в брифе ширина не указана, я взял ширину, которая не дает залезать тексту на ссылку "Подробнее" */
+  max-width: 500px;
   margin: 70px auto 0;
   text-align: center;
   line-height: 51px;
@@ -280,7 +280,7 @@
 }
 
 .feynman__link:hover {
-  color: #0f60cd; /* так, для красоты */
+  color: #0f60cd;
 }
 
 .feynman__link::after {
