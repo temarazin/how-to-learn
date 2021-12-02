@@ -1,0 +1,23 @@
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  color: #2f80ed;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.7;
+}
+
+.khan__buy-link::after {
+  transition: left 0.3s ease;
+  position: relative;
+  left: 0;
+  content: ' →';
+}
+
+.khan__buy-link:hover::after {
+  left: 6px;
+}
