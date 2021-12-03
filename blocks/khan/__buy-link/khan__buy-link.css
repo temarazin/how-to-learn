@@ -19,5 +19,5 @@
 }
 
 .khan__buy-link:hover::after {
-  left: 6px;
+  left: 0.3em;
 }
