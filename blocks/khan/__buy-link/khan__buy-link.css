@@ -12,12 +12,5 @@
 }
 
 .khan__buy-link::after {
-  transition: left 0.3s ease;
-  position: relative;
-  left: 0;
   content: ' →';
-}
-
-.khan__buy-link:hover::after {
-  left: 0.3em;
 }

@@ -9,12 +9,5 @@
 }
 
 .header__link::after {
-  transition: left 0.3s ease;
-  position: relative;
-  left: 0;
   content: ' →';
-}
-
-.header__link:hover::after {
-  left: 0.3em;
 }
